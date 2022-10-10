@@ -64,6 +64,10 @@ public class LinkedList {
 			temp = temp.next;
 		}
 	}
+	public void deleteFirst()
+	{
+		head = head.next;
+	}
 	
 
 	public static void main(String[] args) {
@@ -75,9 +79,15 @@ public class LinkedList {
 		list.display();
 		list.addLast(70);
 		list.display();
+		
 		System.out.println("Enter Position Number To Add:- ");
 		int position =sc.nextInt();
 		list.addPosition(30, position);
+		list.display();
+		
+		list.deleteFirst();
+		list.display();
+		list.deleteFirst();
 		list.display();
 		
 	}
