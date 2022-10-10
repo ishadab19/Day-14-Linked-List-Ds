@@ -1,5 +1,5 @@
 package com.LinkedList;
-
+import java.util.*;
 public class LinkedList {
 	Node head;
 	class Node
@@ -34,6 +34,24 @@ public class LinkedList {
 			temp.next = newNode;
 		}
 	}
+	public void addPosition(Object data, int position)
+	{
+		int index =0;
+		Node newNode = new Node(data);
+		Node left = head;
+		Node right = left.next;
+		while(index < (position-1))
+		{
+			left = left.next;
+			right = right.next;
+			index++;
+			
+		}
+		newNode.next = right;
+		left.next = newNode;
+		
+		
+	}
 	public void display()
 	{
 		Node temp = head;
@@ -51,20 +69,15 @@ public class LinkedList {
 	public static void main(String[] args) {
 		LinkedList list = new LinkedList();
 		System.out.println("Welcome to Linked List Problem");
+		Scanner sc = new Scanner(System.in);
 		System.out.println("Adding Nodes At First");
-		list.addFirst(70);
-		list.display();
-		list.addFirst(30);
-		list.display();
 		list.addFirst(56);
 		list.display();
-		System.out.println();
-		System.out.println("Adding Nodes At last");
-		list.addLast(56);
-		list.display();
-		list.addLast(30);
-		list.display();
 		list.addLast(70);
+		list.display();
+		System.out.println("Enter Position Number To Add:- ");
+		int position =sc.nextInt();
+		list.addPosition(30, position);
 		list.display();
 		
 	}
