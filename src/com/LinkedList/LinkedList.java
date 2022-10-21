@@ -26,4 +26,5 @@ public class LinkedList {
 		list.CreatList(90);
 		list.CreatList(100);
 	}
-}
+	
+  }
