@@ -4,7 +4,7 @@ public class LinkedList {
 	Node head;
 	class Node {
 		
-		Object data;
+		Object data; 
 		Node next;
 
 		Node(Object data) 
