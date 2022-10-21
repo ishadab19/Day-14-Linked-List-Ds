@@ -135,7 +135,7 @@ public class LinkedList {
 		System.out.println();
 		System.out.println("enter Element Number To Search: ");
 		int input = sc.nextInt();
-		System.out.println(list.searhElement(input));
+		System.out.println(list.searhElement(input));  
 
 		
 	}
